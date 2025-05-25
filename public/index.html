@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Clicks-a-lot - Your Job Search Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 h-screen">
+    <div class="container mx-auto px-4 py-8 h-full flex flex-col">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-indigo-600">Sir Clicks-a-lot</h1>
+            <p class="text-gray-600 mt-2">Your AI-powered job search assistant</p>
+        </header>
+
+        <div class="flex-1 flex gap-4">
+            <!-- Sidebar -->
+            <div class="w-1/4 bg-white rounded-lg shadow-lg p-4">
+                <h2 class="text-xl font-semibold mb-4">Features</h2>
+                <ul class="space-y-2">
+                    <li class="p-2 hover:bg-indigo-50 rounded cursor-pointer">Job Search</li>
+                    <li class="p-2 hover:bg-indigo-50 rounded cursor-pointer">Resume Upload</li>
+                    <li class="p-2 hover:bg-indigo-50 rounded cursor-pointer">Interview Prep</li>
+                    <li class="p-2 hover:bg-indigo-50 rounded cursor-pointer">Salary Research</li>
+                </ul>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="flex-1 flex flex-col bg-white rounded-lg shadow-lg">
+                <div id="chat-messages" class="flex-1 p-4 overflow-y-auto">
+                    <div class="message agent">
+                        <div class="message-content">
+                            Hello! I'm Sir Clicks-a-lot, your job search assistant. How can I help you today?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t p-4">
+                    <form id="chat-form" class="flex gap-2">
+                        <input 
+                            type="text" 
+                            id="message-input" 
+                            class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-500"
+                            placeholder="Type your message..."
+                        >
+                        <button 
+                            type="submit"
+                            class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 focus:outline-none"
+                        >
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

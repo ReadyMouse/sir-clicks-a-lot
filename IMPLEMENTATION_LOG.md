@@ -71,4 +71,12 @@
   - Modern chat interface
   - Conversation history in sidebar
   - Feature overview
-  - Session state management 
+  - Session state management
+
+### 2024-03-19 20:45 - TypeScript Migration
+- Switched project to TypeScript:
+  - Created `package.json` with TypeScript dependencies
+  - Added `tsconfig.json` configuration
+  - Implemented `BaseAgent.ts` and `SirCALAgent.ts`
+  - Integrated with local Eliza implementation
+  - Added type definitions and interfaces 
