@@ -5,6 +5,7 @@
 - Framework: Express
 - Frontend: HTML/CSS (Tailwind CSS)
 - Database: SQLite (for storing user data, job applications, and tracking)
+- AI: Claude 3 Opus (Anthropic)
 - External APIs needed:
   - Job search APIs (LinkedIn, Indeed, etc.)
   - Resume parsing
@@ -22,26 +23,27 @@ sir-clicks-a-lot/
 │   ├── eliza/                # Eliza pattern matching
 │   │   └── index.ts          # Eliza implementation
 │   ├── services/             # External service integrations
-│   │   ├── job_search.ts
-│   │   ├── resume_parser.ts
-│   │   ├── company_research.ts
-│   │   └── event_finder.ts
+│   │   ├── claude.ts         # Claude AI integration
+│   │   ├── job_search.ts     # [Planned]
+│   │   ├── resume_parser.ts  # [Planned]
+│   │   ├── company_research.ts # [Planned]
+│   │   └── event_finder.ts   # [Planned]
 │   ├── models/               # Data models
-│   │   ├── user.ts
-│   │   ├── job.ts
-│   │   ├── application.ts
-│   │   └── interview.ts
+│   │   ├── user.ts          # [Planned]
+│   │   ├── job.ts           # [Planned]
+│   │   ├── application.ts   # [Planned]
+│   │   └── interview.ts     # [Planned]
 │   └── utils/                # Helper functions
-│       ├── file_handlers.ts
-│       └── data_processors.ts
+│       ├── file_handlers.ts  # [Planned]
+│       └── data_processors.ts # [Planned]
 ├── public/                   # Web interface
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
+│   ├── index.html           # Main interface
+│   ├── styles.css           # Styling
+│   └── app.js              # Frontend logic
 ├── data/                     # Data storage
-│   ├── resumes/
-│   ├── cover_letters/
-│   └── db/
+│   ├── resumes/             # [Planned]
+│   ├── cover_letters/       # [Planned]
+│   └── db/                  # [Planned]
 ├── tests/                    # Test suite
 ├── config/                   # Configuration files
 └── docs/                     # Documentation
@@ -49,30 +51,50 @@ sir-clicks-a-lot/
 
 ## Implementation Phases
 
-### Phase 1: Core Setup
+### Phase 1: Core Setup ✅
 - [X] Set up project structure
 - [X] Implement basic Eliza agent integration
-- [ ] Create database schema
 - [X] Set up configuration management
+- [X] Create web interface
+- [X] Integrate Claude AI
+- [ ] Create database schema
 
 ### Phase 2: Basic Features
 - [ ] Resume/Cover letter upload and storage
+- [ ] Job preferences management
 - [ ] Basic job search integration
-- [ ] Application tracking system
-- [X] Simple notification system (chat interface)
+- [ ] Application tracking
+- [ ] Interview scheduling
 
 ### Phase 3: Advanced Features
+- [ ] Automated job applications
 - [ ] Resume customization
-- [ ] Cover letter generation
 - [ ] Company research
-- [ ] Interview preparation
-- [ ] Salary comparison
+- [ ] Salary analysis
+- [ ] Networking integration
 
-### Phase 4: Enhancement Features
-- [ ] Networking opportunity finder
-- [ ] Course/training recommendations
+### Phase 4: Enhancement
+- [ ] Machine learning for job matching
 - [ ] Advanced analytics
-- [ ] Interview feedback system
+- [ ] Mobile optimization
+- [ ] API documentation
+- [ ] User guides
+
+## Next Steps
+1. Design and implement database schema
+2. Create resume upload functionality
+3. Implement job preferences storage
+4. Add basic job search integration
+5. Set up application tracking system
+
+## Future Considerations
+- Web search integration
+- Real-time notifications
+- Mobile app development
+- API rate limiting
+- User authentication
+- Data encryption
+- Backup systems
 
 ## Data Models
 
@@ -100,15 +122,6 @@ sir-clicks-a-lot/
 - Company research
 - Preparation materials
 - Feedback
-
-## Next Steps
-1. [X] Set up development environment
-2. [X] Initialize project structure
-3. [X] Implement basic Eliza agent integration
-4. [ ] Create database schema
-5. [ ] Implement resume upload functionality
-6. [ ] Add job search API integration
-7. [ ] Develop application tracking system
 
 ## Questions to Address
 - Which job search APIs to integrate first?

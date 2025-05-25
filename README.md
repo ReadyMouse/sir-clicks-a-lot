@@ -6,6 +6,25 @@ An AI-powered job search assistant that helps streamline your job hunting proces
 
 Sir Clicks-a-lot is your personal job search companion that handles everything from finding opportunities to preparing for interviews. Think of it as your dedicated job search agent that does everything to get you in the front door - except pack your lunch!
 
+## Features
+
+### AI-Powered Job Search Assistant
+- Intelligent conversation using Claude AI
+- Knightly personality with professional expertise
+- Context-aware responses for job search queries
+- Resume and cover letter optimization suggestions
+- Interview preparation guidance
+- Salary negotiation insights
+- Course and training recommendations
+- Inclusive and professional communication
+
+### Modern Web Interface
+- Real-time chat interface
+- Dark mode support
+- Responsive design
+- Conversation history tracking
+- Feature-rich sidebar navigation
+
 ## Planned Features
 
 ### Application Management
@@ -79,22 +98,24 @@ This uses `ts-node` to run your server.
 After running either command, your web interface will be available at:
 **http://localhost:3000**
 
-## Features
+## Current Capabilities
 
-### AI-Powered Job Search Assistant
-- Intelligent conversation using Claude AI
-- Context-aware responses for job search queries
-- Resume and cover letter optimization suggestions
-- Interview preparation guidance
-- Salary negotiation insights
+### Job Search Assistance
+- Career guidance and strategy
+- Resume and cover letter optimization
+- Interview preparation
+- Salary negotiation advice
 - Course and training recommendations
+- Networking opportunities
 
-### Modern Web Interface
+### Technical Features
+- TypeScript/Node.js backend
+- Express server
+- Claude AI integration
 - Real-time chat interface
-- Dark mode support
-- Responsive design
 - Conversation history tracking
-- Feature-rich sidebar navigation
+- Dark mode UI
+- Responsive design
 
 ## Requirements
 
