@@ -1,0 +1,30 @@
+# Sir Clicks-a-lot Configuration
+
+# Database Configuration
+database:
+  type: sqlite
+  path: data/db/sir_clicks.db
+
+# Job Search Configuration
+job_search:
+  apis:
+    linkedin:
+      enabled: false
+      api_key: ""
+    indeed:
+      enabled: false
+      api_key: ""
+  
+# File Storage
+storage:
+  resume_path: data/resumes
+  cover_letter_path: data/cover_letters
+
+# Notification Settings
+notifications:
+  email:
+    enabled: false
+    smtp_server: ""
+    smtp_port: 587
+    username: ""
+    password: "" 
