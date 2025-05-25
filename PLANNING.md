@@ -1,8 +1,9 @@
 # Project Planning Document
 
 ## Technical Stack
-- Base: Eliza Agent Kit
-- Language: Python
+- Base: TypeScript/Node.js
+- Framework: Express
+- Frontend: HTML/CSS (Tailwind CSS)
 - Database: SQLite (for storing user data, job applications, and tracking)
 - External APIs needed:
   - Job search APIs (LinkedIn, Indeed, etc.)
@@ -15,23 +16,28 @@
 ```
 sir-clicks-a-lot/
 ├── src/
-│   ├── agent/                 # Eliza agent core
-│   │   ├── __init__.py
-│   │   ├── base_agent.py     # Base agent class
-│   │   └── job_agent.py      # Job-specific agent implementation
+│   ├── agent/                 # Agent core
+│   │   ├── BaseAgent.ts      # Base agent class
+│   │   └── SirCALAgent.ts    # Job-specific agent implementation
+│   ├── eliza/                # Eliza pattern matching
+│   │   └── index.ts          # Eliza implementation
 │   ├── services/             # External service integrations
-│   │   ├── job_search.py
-│   │   ├── resume_parser.py
-│   │   ├── company_research.py
-│   │   └── event_finder.py
+│   │   ├── job_search.ts
+│   │   ├── resume_parser.ts
+│   │   ├── company_research.ts
+│   │   └── event_finder.ts
 │   ├── models/               # Data models
-│   │   ├── user.py
-│   │   ├── job.py
-│   │   ├── application.py
-│   │   └── interview.py
+│   │   ├── user.ts
+│   │   ├── job.ts
+│   │   ├── application.ts
+│   │   └── interview.ts
 │   └── utils/                # Helper functions
-│       ├── file_handlers.py
-│       └── data_processors.py
+│       ├── file_handlers.ts
+│       └── data_processors.ts
+├── public/                   # Web interface
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
 ├── data/                     # Data storage
 │   ├── resumes/
 │   ├── cover_letters/
@@ -45,15 +51,15 @@ sir-clicks-a-lot/
 
 ### Phase 1: Core Setup
 - [X] Set up project structure
-- [ ] Implement basic Eliza agent integration
+- [X] Implement basic Eliza agent integration
 - [ ] Create database schema
-- [ ] Set up configuration management
+- [X] Set up configuration management
 
 ### Phase 2: Basic Features
 - [ ] Resume/Cover letter upload and storage
 - [ ] Basic job search integration
 - [ ] Application tracking system
-- [ ] Simple notification system
+- [X] Simple notification system (chat interface)
 
 ### Phase 3: Advanced Features
 - [ ] Resume customization
@@ -96,11 +102,13 @@ sir-clicks-a-lot/
 - Feedback
 
 ## Next Steps
-1. Set up development environment
-2. Initialize project structure
-3. Implement basic Eliza agent integration
-4. Create database schema
-5. Begin Phase 1 implementation
+1. [X] Set up development environment
+2. [X] Initialize project structure
+3. [X] Implement basic Eliza agent integration
+4. [ ] Create database schema
+5. [ ] Implement resume upload functionality
+6. [ ] Add job search API integration
+7. [ ] Develop application tracking system
 
 ## Questions to Address
 - Which job search APIs to integrate first?

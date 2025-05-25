@@ -27,8 +27,8 @@
 }
 
 .message.agent .message-content {
-    background-color: #f3f4f6;
-    color: #1f2937;
+    background-color: #374151;
+    color: #e5e7eb;
     border-bottom-left-radius: 0.25rem;
 }
 
@@ -38,15 +38,15 @@
 }
 
 #chat-messages::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #1f2937;
     border-radius: 3px;
 }
 
 #chat-messages::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #4b5563;
     border-radius: 3px;
 }
 
 #chat-messages::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #6b7280;
 } 

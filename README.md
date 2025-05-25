@@ -29,7 +29,72 @@ Sir Clicks-a-lot is your personal job search companion that handles everything f
 
 ## Getting Started
 
-[Coming soon]
+### Prerequisites
+
+- Node.js (v16 or higher)
+- pnpm (recommended) or npm
+- Anthropic API key for Claude AI
+
+### Environment Setup
+
+1. Clone the repository:
+```bash
+git clone git@github.com:ReadyMouse/sir-clicks-a-lot.git
+cd sir-clicks-a-lot
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+```
+
+3. Create a `.env` file in the project root:
+```
+ANTHROPIC_API_KEY=your_api_key_here
+PORT=3000
+```
+
+### Build the Project
+
+To compile the TypeScript source code:
+
+```bash
+pnpm run build
+```
+
+### Run the Web Interface
+
+#### For Development (auto-reloads on changes):
+```bash
+pnpm run dev
+```
+This uses `ts-node-dev` and is best while you're actively developing.
+
+#### For Production (runs the compiled JavaScript):
+```bash
+pnpm start
+```
+This uses `ts-node` to run your server.
+
+After running either command, your web interface will be available at:
+**http://localhost:3000**
+
+## Features
+
+### AI-Powered Job Search Assistant
+- Intelligent conversation using Claude AI
+- Context-aware responses for job search queries
+- Resume and cover letter optimization suggestions
+- Interview preparation guidance
+- Salary negotiation insights
+- Course and training recommendations
+
+### Modern Web Interface
+- Real-time chat interface
+- Dark mode support
+- Responsive design
+- Conversation history tracking
+- Feature-rich sidebar navigation
 
 ## Requirements
 

@@ -1,4 +1,4 @@
-import { Eliza } from 'eliza';
+import { Eliza } from '../eliza';
 import { BaseAgent } from './BaseAgent';
 
 interface ConversationEntry {
@@ -18,9 +18,9 @@ export class SirCALAgent extends BaseAgent {
   private jobPreferences: JobPreferences = {};
   private eliza: Eliza;
 
-  constructor() {
+  constructor(apiKey: string) {
     super();
-    this.eliza = new Eliza();
+    this.eliza = new Eliza(apiKey);
   }
 
   public initialize(): void {
@@ -45,7 +45,7 @@ export class SirCALAgent extends BaseAgent {
     };
   }
 
-  public processInput(userInput: string): string {
+  public async processInput(userInput: string): Promise<string> {
     if (!this.isInitialized()) {
       throw new Error("Agent must be initialized before processing input");
     }
@@ -56,23 +56,28 @@ export class SirCALAgent extends BaseAgent {
       timestamp: new Date().toISOString()
     });
 
-    // Process with Eliza first
-    const elizaResponse = this.eliza.transform(userInput);
-    if (elizaResponse) {
-      return elizaResponse;
-    }
+    try {
+      // Process with Eliza first
+      const elizaResponse = await this.eliza.transform(userInput);
+      if (elizaResponse) {
+        return elizaResponse;
+      }
 
-    // Basic response logic
-    const input = userInput.toLowerCase();
-    if (input.includes('hello') || input.includes('hi')) {
-      return this.getRandomResponse('greeting');
-    } else if (input.includes('job') || input.includes('position')) {
-      return this.getRandomResponse('jobSearch');
-    } else if (input.includes('resume')) {
-      return this.getRandomResponse('resumeHelp');
-    }
+      // Basic response logic
+      const input = userInput.toLowerCase();
+      if (input.includes('hello') || input.includes('hi')) {
+        return this.getRandomResponse('greeting');
+      } else if (input.includes('job') || input.includes('position')) {
+        return this.getRandomResponse('jobSearch');
+      } else if (input.includes('resume')) {
+        return this.getRandomResponse('resumeHelp');
+      }
 
-    return "I understand. How else can I help you with your job search?";
+      return "I understand. How else can I help you with your job search?";
+    } catch (error) {
+      console.error('Error processing input:', error);
+      return "I apologize, but I'm having trouble processing your request right now. Please try again.";
+    }
   }
 
   public getConversationHistory(): ConversationEntry[] {
